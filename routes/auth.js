@@ -15,6 +15,7 @@ return res.send("heloo guys");
 
 
 });
+
 authRouter.post("/auth/signup",async(req,res)=>{
 try{
     const {name,email,password}=req.body;
@@ -66,8 +67,8 @@ res.json({user:user});//or .res.json(user);both same..
 catch(e){
   
   return res.status(500).json({//error:'hkk'
-    error:e.message
-   // "key":"something went wrong"
+    //error:e.message
+   "sorry!":"something went wrong try again"
     
     });
   
@@ -104,7 +105,7 @@ res.json({token,...user._doc});
 catch(e){
 return res.status(500).json({//error:'hkk'
 //error:e.message
-"key":"something went wrong"
+"sorry! ":"something went wrong"
 
 });
 }
